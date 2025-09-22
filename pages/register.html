@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Registration - Doctor Appointment System</title>
+  <link rel="stylesheet" href="../css/register.css">
+  <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+   <!-- Header with Navigation -->
+  <header>
+    <div class="container header-container">
+      <h1 class="logo">Doctor Appointment</h1>
+      
+      <!-- Hamburger menu button -->
+      <div class="menu-toggle" id="menu-toggle">&#9776;</div>
+      
+      <nav>
+        <ul class="nav-links" id="nav-links">
+          <li><a href="../index.html">Home</a></li>
+          <li><a href="login.html">login</a></li>
+          <li><a href="">Doctors</a></li>
+          <li><a href="">Appointments</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+  <div class="register-container">
+    <h2>Create Account</h2>
+    <p class="subtitle">Join us today and book your doctor’s appointment easily.</p>
+
+    <form action="register.php" method="post" class="register-form">
+      <div class="form-group">
+        <label for="name">Full Name</label>
+        <input type="text" id="name" name="name" placeholder="Enter your full name" required>
+      </div>
+
+      <div class="form-group">
+        <label for="email">Email Address</label>
+        <input type="email" id="email" name="email" placeholder="Enter your email" required>
+      </div>
+
+      <div class="form-group">
+        <label for="password">Password</label>
+        <input type="password" id="password" name="password" placeholder="Create a password" required>
+      </div>
+
+      <div class="form-group">
+        <label for="confirm">Confirm Password</label>
+        <input type="password" id="confirm" name="confirm" placeholder="Re-enter your password" required>
+      </div>
+
+      <button type="submit" class="btn">Register</button>
+      <p class="login-link">
+        Already have an account? <a href="login.html">Login here</a>
+      </p>
+    </form>
+  </div>
+  <!-- Footer -->
+  <footer>
+    <p>&copy; 2025 Doctor Appointment System. All rights reserved.</p>
+  </footer>
+<!-- Small JS for toggle -->
+  <script>
+    const toggle = document.getElementById('menu-toggle');
+    const navLinks = document.getElementById('nav-links');
+
+    toggle.addEventListener('click', () => {
+      navLinks.classList.toggle('show');
+    });
+  </script>
+</body>
+</html>
