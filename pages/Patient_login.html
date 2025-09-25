@@ -3,31 +3,52 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Registration - Doctor Appointment System</title>
-  <link rel="stylesheet" href="../css/register.css">
+  <title>Login - Doctor Appointment System</title>
   <link rel="stylesheet" href="../css/style.css">
+  <link rel="stylesheet" href="../css/register.css">
 </head>
 <body>
    <!-- Header with Navigation -->
   <header>
     <div class="container header-container">
-      <h1 class="logo">Doctor Appointment</h1>
-      
+      <div class="logo">
+        <img src="../images/logo.png" alt="Doctor Appointment System Logo">
+        <label for="Doctor Appointment">Doctor Appointment</label>
+      </div>
       <!-- Hamburger menu button -->
       <div class="menu-toggle" id="menu-toggle">&#9776;</div>
       
       <nav>
         <ul class="nav-links" id="nav-links">
           <li><a href="../index.html">Home</a></li>
-          <li><a href="login.html">login</a></li>
-          <li><a href="">Doctors</a></li>
-          <li><a href="">Appointments</a></li>
+          <li><a href="Doctor_login.html">Doctor Login</a></li>
         </ul>
       </nav>
     </div>
   </header>
-  <div class="register-container">
-    <h2>Create Account</h2>
+  <div class="login-container">
+    <h2>Patient Login form</h2>
+    <p class="subtitle">Welcome back! Please log in to continue.</p>
+
+    <form action="patient_dashboard.html" method="get" class="login-form">
+      <div class="form-group">
+        <label for="email">Email Address</label>
+        <input type="email" id="email" name="email" placeholder="Enter your email" required>
+      </div>
+
+      <div class="form-group">
+        <label for="password">Password</label>
+        <input type="password" id="password" name="password" placeholder="Enter your password" required>
+      </div>
+
+      <button type="submit" class="btn">Login</button>
+      <p class="register-link">
+        Don’t have an account? <a href="register.html">Create one</a>
+      </p>
+    </form>
+  </div>
+  <div class="register-container" style="display: none;">
+    <h2>Our Patient !!<br> Create Account</h2>
     <p class="subtitle">Join us today and book your doctor’s appointment easily.</p>
 
     <form action="register.php" method="post" class="register-form">
@@ -65,9 +86,25 @@
   <script>
     const toggle = document.getElementById('menu-toggle');
     const navLinks = document.getElementById('nav-links');
+    const loginContainer = document.querySelector('.login-container');
+    const registerContainer = document.querySelector('.register-container');
+    const createAccountLink = document.querySelector('.register-link a');
+    const loginLink = document.querySelector('.login-link a');
 
     toggle.addEventListener('click', () => {
       navLinks.classList.toggle('show');
+    });
+
+    createAccountLink.addEventListener('click', (e) => {
+      e.preventDefault();
+      loginContainer.style.display = 'none';
+      registerContainer.style.display = 'block';
+    });
+
+    loginLink.addEventListener('click', (e) => {
+      e.preventDefault();
+      loginContainer.style.display = 'block';
+      registerContainer.style.display = 'none';
     });
   </script>
 </body>
