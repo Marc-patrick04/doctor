@@ -30,10 +30,10 @@
     <h2>Patient Login form</h2>
     <p class="subtitle">Welcome back! Please log in to continue.</p>
 
-    <form action="patient_dashboard.html" method="get" class="login-form">
+    <form action="patient_dashboard.html" method="POST" class="login-form">
       <div class="form-group">
         <label for="email">Email Address</label>
-        <input type="email" id="email" name="email" placeholder="Enter your email" required>
+        <input type="email" id="email" name="patientemail" placeholder="Enter your email" required>
       </div>
 
       <div class="form-group">
@@ -51,15 +51,15 @@
     <h2>Our Patient !!<br> Create Account</h2>
     <p class="subtitle">Join us today and book your doctor’s appointment easily.</p>
 
-    <form action="register.php" method="post" class="register-form">
+    <form action="insert-patient.php" method="POST" class="register-form">
       <div class="form-group">
-        <label for="name">Full Name</label>
-        <input type="text" id="name" name="name" placeholder="Enter your full name" required>
+        <label for="patientname">Full Name</label>
+        <input type="text" id="patientname" name="patientname" placeholder="Enter your full name" required>
       </div>
 
       <div class="form-group">
-        <label for="email">Email Address</label>
-        <input type="email" id="email" name="email" placeholder="Enter your email" required>
+        <label for="patientemail">Email Address</label>
+        <input type="email" id="patientemail" name="patientemail" placeholder="Enter your email" required>
       </div>
 
       <div class="form-group">
@@ -68,11 +68,11 @@
       </div>
 
       <div class="form-group">
-        <label for="confirm">Confirm Password</label>
-        <input type="password" id="confirm" name="confirm" placeholder="Re-enter your password" required>
+        <label for="Confirmpassword">Confirm Password</label>
+        <input type="password" id="confirmpassword" name="confirmpassword" placeholder="Re-enter your password" required>
       </div>
 
-      <button type="submit" class="btn">Register</button>
+      <button type="submit" class="btn" name="submit">Register</button>
       <p class="login-link">
         Already have an account? <a href="login.html">Login here</a>
       </p>
