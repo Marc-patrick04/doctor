@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Request Appointment</title>
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+    <!-- Header with Navigation -->
+    <header>
+        <div class="container header-container">
+            <div class="logo">
+                <img src="../images/logo.png" alt="Doctor Appointment System Logo">
+                <label for="Doctor Appointment">Doctor Appointment</label>
+            </div>
+            <div class="menu-toggle" id="menu-toggle">&#9776;</div>
+            <nav>
+                <ul class="nav-links" id="nav-links">
+                    <li><a href="patient_dashboard.html">Dashboard</a></li>
+                    <li><a href="../index.html">Logout</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main class="container">
+        <section class="request-form-section">
+            <h2>Request an Appointment</h2>
+            <form class="request-form" id="appointmentRequestForm">
+                <div class="form-group">
+                    <label for="specialization">Medical Specialization:</label>
+                    <select id="specialization" name="specialization" required>
+                        <option value="">Select Specialization</option>
+                        <option value="general">General Medicine</option>
+                        <option value="cardiology">Cardiology</option>
+                        <option value="pediatrics">Pediatrics</option>
+                        <option value="dermatology">Dermatology</option>
+                        <option value="orthopedics">Orthopedics</option>
+                    </select>
+                </div>
+                <div class="form-actions">
+                    <button type="submit" class="btn btn-primary">Submit Request</button>
+                    <button class="btn btn-primary"><a href="patient_dashboard.html" class="link-p">Back</a></button>
+                </div>
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Doctor Appointment System. All rights reserved.</p>
+    </footer>
+</body>
+</html>

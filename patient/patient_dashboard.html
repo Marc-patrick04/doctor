@@ -19,26 +19,48 @@
       
       <nav>
         <ul class="nav-links" id="nav-links">
-          <li><a href="../index.html">Home</a></li>
-          <li><a href="Doctor_login.html">Doctor Login</a></li>
-          <li><a href="#">Logout</a></li>
+          <li><a href="../index.html">Logout</a></li>
         </ul>
       </nav>
     </div>
   </header>
-
   <!-- Main Content -->
   <main class="container">
-    <section class="dashboard">
-      <h2>Welcome, Patient!</h2><br>
-
-      <p>This is your dashboard. Here you can manage your appointments.</p><br>
-
-      <p>ALL appointment(no,date,doctor name,patient name,hours) will be displayed on that page</p><br>
-
-
-      <p>list of all patient and doctor with appointment</p>
-    </section>
+    <!-- Replace the existing fieldset with this -->
+    <main class="container">
+      <section class="booking-section">
+        <div class="booking-card">
+          <h2>Book Your Appointment</h2>
+          <p>Schedule a consultation with our expert doctors</p>
+          <button class="booking-btn"><a href="request.html" class="link-p">Request Appointment</a> </button>
+        </div>
+      </section>
+    
+      <section class="dashboard">
+        <h2>Your Appointments</h2>
+        <table class="appointment-table">
+          <thead>
+            <tr>
+              <th>Date</th>
+              <th>Time</th>
+              <th>Patient</th>
+              <th>Doctor</th>
+              <th>Status</th>
+            </tr>
+          </thead>
+          <tbody>
+            <!-- Sample row, you can populate this dynamically -->
+            <tr>
+              <td>2025-09-30</td>
+              <td>10:00 AM</td>
+              <td>John Doe</td>
+              <td>Dr. Smith</td>
+              <td><span class="status pending">Pending</span></td>
+            </tr>
+          </tbody>
+        </table>
+      </section>
+    </main>
   </main>
 
   <!-- Footer -->
